@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Main{% endblock %}
+
+{% block content %}
+<H1>MAIN PAGE</H1>
+{% endblock content %}
+
+{% block javascript %}
+{{ super() }}
+<script src="{{ url_for('static', filename='js/send_input_data_form.js') }}"></script>
+{% endblock javascript %}

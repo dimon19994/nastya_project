@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+{% if error %}
+    <H2 style="border-color: red">{{ error }}</H2>
+{% endif %}
+<form method="POST">
+    <label>Login
+        <input type="text" name="login">
+    </label>
+    <label>Password
+        <input type="password" name="password">
+    </label>
+    <button type="submit">Sign in</button>
+</form>
+{% endblock content %}
+
+{% block javascript %}
+{{ super() }}
+<script src="{{ url_for('static', filename='js/send_input_data_form.js') }}"></script>
+{% endblock javascript %}
